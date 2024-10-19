@@ -44,7 +44,7 @@ pipeline {
                 // Desplegar la imagen en Minikube
                 sh "kubectl run muface --image=${DOCKER_IMAGE} --port=8081 --restart=Always"
                 // Exponer el servicio
-                sh "kubectl expose deployment muface --type=NodePort --port=8081"
+                sh "kubectl expose deployment muface --type=NodePort --port=8082"
             }
         }
     }
